@@ -1,0 +1,17 @@
+<h1>INDEX</h1>
+
+
+<h1> <%= link_to "New", new_sale_path %> </h1>
+
+
+<%= @sales.each do |s| %>
+
+<p>cod: <%= s.cod %> </p>
+<p>detail: <%= s.detail %> </p>
+<p>category: <%= s.category %> </p>
+<p>value: <%= s.value %> </p>
+<p>discount: <%= s.discount %> </p>
+<p>tax: <%= s.tax %> </p>
+<p>total: <%= s.total %> </p>
+<hr>
+<% end %>

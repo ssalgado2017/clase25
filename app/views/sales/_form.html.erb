@@ -1,0 +1,23 @@
+<h1>FORMULARIO</h1>
+<br>
+<%= form_with(model: @sale, local: true) do |f| %>
+	<%= f.label :cod, "Codigo de la venta" %>
+	<%= f.text_field :cod %>
+	<br><br>
+	<%= f.label :detail, "Detalle de la venta" %>
+	<%= f.text_area :detail %>
+	<br><br>
+	<%= f.label :category, "Categoria de la venta" %>
+    <%= f.select :category, options_for_select([["uno", "1"], ["dos", "2"], ["tres", "3"], ["cuatro", "4"] ])%>
+    <br><br>
+	<%= f.label :value, "Valor" %>
+	<%= f.text_field :value %>
+	<br><br>
+	<%= f.label :discount, "Porcentaje de Descuento (1 a 100)" %>
+	<%= f.text_field :discount %>
+	<br><br>
+	<%= f.label :tax, "Exento de IVA" %>
+ 	<%= f.check_box :tax %>
+	<br><br>
+ 	<%= f.submit :crear %>
+<% end %>
